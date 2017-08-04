@@ -56,7 +56,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#pragma warning(disable:4996);
+#pragma warning(disable:4996)
 
 #define __GETOPT_H__
 
@@ -67,7 +67,6 @@
 #include <string.h>
 #include <stdarg.h>
 #include <stdio.h>
-#include <windows.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -114,6 +113,8 @@ static char EMSG[] = "";
 #else
 #define	EMSG		""
 #endif
+
+struct option;
 
 static int getopt_internal(int, char * const *, const char *,
 			   const struct option *, int *, int);
